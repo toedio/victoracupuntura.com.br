@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Pontos</title>
+    <style>
+        :root {
+            --cor-primaria: #f4eddd;
+            --cor-secundaria: #1a484e;
+            --cor-fundo: #f5f7f9;
+            --cor-texto: #1f1f1f;
+            --cor-clara: #fff;
+            --cor-subtexto: #555;
+            --cor-footer: #ccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--cor-primaria);
+            color: var(--cor-clara);
+            padding: 20px 40px;
+        }
+
+        header img {
+            height: 250px;
+            background-color: var(--cor-primaria);
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        header div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav {
+            background: var(--cor-secundaria);
+            padding: 10px 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--cor-clara);
+        }
+
+        .hero {
+            background: url("banner.png") center/cover no-repeat;
+            background-color: rgba(0, 0, 0, 0.6);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cor-clara);
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            padding: 30px 0;
+        }
+
+        section {
+            padding: 60px 40px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service {
+            background: var(--cor-clara);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .service h3 {
+            color: var(--cor-secundaria);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .service p {
+            color: var(--cor-subtexto);
+        }
+
+        #about {
+            background: var(--cor-clara);
+        }
+
+        #about p {
+            color: var(--cor-subtexto);
+            padding: 20px;
+            margin: 10px 30px;
+        }
+
+        #contato {
+            padding: 0;
+            background: var(--cor-secundaria);
+        }
+
+        .contact-centered {
+            color: var(--cor-clara);
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .contact-centered h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-centered p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        footer {
+            background: var(--cor-secundaria);
+            color: var(--cor-footer);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <img src="logo.png" alt="Logo Victor Pontos" />
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">Sobre nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Acupuntura e Terapias Integrativas</h2>
+    </section>
+
+    <section id="about">
+        <h2 style="text-align:center; margin-bottom: 40px;">Sobre nós</h2>
+        <p>
+            A acupuntura é uma prática terapêutica da medicina tradicional chinesa, baseada em conhecimentos milenares, que é utilizada para a manutenção e restauração da saúde física e mental. Ela envolve a inserção cuidadosa de agulhas finas em pontos específicos do corpo, com o objetivo de estimular o fluxo de energia vital, conhecida como Qi. Esse estímulo promove a cura, alívio de sintomas e fortalecimento do corpo.
+        </p>
+    </section>
+
+    <section id="servicos">
+        <h2 style="text-align:center; margin-bottom: 40px;">Nossos Serviços</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Alívio de dores musculares e articulares</h3>
+                <p>Tratamentos eficazes para relaxamento, bem-estar e recuperação muscular.</p>
+            </div>
+            <div class="service">
+                <h3>Tratamento de dores crônicas e enxaqueca</h3>
+                <p>Redução da frequência e intensidade de dores crônicas e crises de enxaqueca.</p>
+            </div>
+            <div class="service">
+                <h3>Fortalecimento do sistema imunológico</h3>
+                <p>Técnicas para reforçar suas defesas naturais e promover o equilíbrio do corpo e mente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="contact-centered">
+            <p>Rua Valdemar Bertoldi, 255, Betel, Paulínia, SP</p>
+            <p>pontuschka@gmail.com</p>
+            <p>(19) 98801-2355</p>
+            <p>CNPJ: 32.378.776/0001-36</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Victor Pontos. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>
